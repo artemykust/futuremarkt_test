@@ -1,0 +1,337 @@
+.container {
+  background: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #133457;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 40px 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  width: 100%;
+  max-width: 1320px;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+
+  font-family: "Raleway", sans-serif;
+
+  .about {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+
+    padding-left: 24px;
+    border-left: 1px solid #fff;
+  }
+
+  .about_xs {
+    display: none;
+    padding-left: 6px;
+
+    border-left: 1px solid #fff;
+    opacity: 0.8;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 40px;
+
+    .btn_record,
+    .btn_consultation {
+      position: relative;
+      font-family: "Raleway", sans-serif;
+      width: 380px;
+      height: 71px;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 0;
+
+      display: flex;
+
+      cursor: pointer;
+    }
+
+    .btn_record_xs,
+    .btn_consultation_xs {
+      display: none;
+    }
+
+    .btn_record {
+      .btn_text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #0b3461;
+
+        height: 100%;
+        width: 80%;
+      }
+
+      .btn_icon {
+        display: inline-block;
+        position: relative;
+        width: 71px;
+        height: 71px;
+
+        svg {
+          position: absolute;
+          bottom: 13px;
+          right: 13px;
+        }
+      }
+    }
+
+    .btn_consultation {
+      .btn_text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #fff;
+
+        height: 100%;
+        width: 80%;
+      }
+
+      .btn_icon {
+        display: inline-block;
+        position: relative;
+        width: 71px;
+        height: 71px;
+
+        svg {
+          position: absolute;
+          bottom: 13px;
+          right: 13px;
+        }
+      }
+    }
+
+    .transparent {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .solid {
+      background-color: #fff;
+      color: #07305d;
+      border: none;
+    }
+  }
+
+  .performance {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    max-width: 800px;
+    gap: 40px;
+
+    .item {
+      height: 190px;
+      width: 380px;
+      padding-left: 30px;
+      border-left: 1px solid #fff;
+
+      .subtitle {
+        font-size: 16px;
+        font-weight: 400;
+
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .performance_xs {
+    display: none;
+  }
+
+  .mentor {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+
+    height: auto;
+    width: auto;
+    max-width: 525px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 40px 150px;
+
+    .mentor {
+      right: 5%;
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .performance {
+      .item {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .about {
+      max-width: 60%;
+    }
+    .title {
+      font-size: 50px;
+    }
+    .mentor {
+      right: -10%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    // overflow: hidden;
+    padding: 16px 20px;
+
+    .content {
+      margin: 0;
+      width: 80%;
+      justify-content: space-evenly;
+      gap: 40px;
+    }
+
+    .about {
+      display: none;
+    }
+
+    .about_xs {
+      display: block;
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .mentor {
+      right: -35%;
+      width: 355px;
+    }
+
+    .buttons {
+      .btn_record_xs,
+      .btn_consultation_xs {
+        position: relative;
+        font-family: "Raleway", sans-serif;
+        width: 126px;
+        height: 30px;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 0;
+
+        display: flex;
+
+        cursor: pointer;
+      }
+
+      .btn_record,
+      .btn_consultation {
+        display: none;
+      }
+
+      .btn_record_xs {
+        display: flex;
+
+        .btn_text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-right: 1px solid #0b3461;
+
+          height: 100%;
+          width: 80%;
+        }
+
+        .btn_icon {
+          display: inline-block;
+          position: relative;
+          width: 20px;
+          height: 20px;
+
+          svg {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+          }
+        }
+      }
+
+      .btn_consultation_xs {
+        .btn_text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-right: 1px solid #fff;
+
+          height: 100%;
+          width: 80%;
+        }
+
+        .btn_icon {
+          display: inline-block;
+          position: relative;
+          width: 20px;
+          height: 20px;
+
+          svg {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+          }
+        }
+      }
+    }
+
+    .performance {
+      display: none;
+    }
+
+    .performance_xs {
+      font-family: "Montserrat", sans-serif;
+      display: flex;
+      max-width: 70%;
+      gap: 45px;
+      z-index: 2;
+
+      .item {
+        height: 45px;
+        width: 53px;
+        padding-left: 5px;
+        border-left: 1px solid #fff;
+
+        .title {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+
+        .subtitle {
+          font-size: 14px;
+          font-weight: 400;
+
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+  color: #fff;
+}
+
+h1 {
+  line-height: 135%;
+  font-size: 65px;
+  font-weight: 600;
+}
+
+h2 {
+  line-height: 140%;
+  font-size: 55px;
+  font-weight: 600;
+
+  margin-bottom: 28px;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+}

@@ -1,0 +1,293 @@
+.sidepanel_smooth {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.sidepanel {
+  font-family: "Raleway";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 612px;
+  height: 100%;
+
+  padding: 100px 75px 150px 50px;
+
+  background-color: #0f1d45;
+
+  z-index: 101;
+
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.panel_title {
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.formField {
+  color: #fff;
+
+  width: 100%;
+  height: 36px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  opacity: 0.8;
+}
+
+.formFieldError {
+  border: 1px solid #e11d48;
+}
+
+.formFieldErrorMessage {
+  color: #e11d48;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formCheckbox {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+
+  height: 42px;
+  width: 100%;
+
+  opacity: 0.8;
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: transparent;
+  }
+
+  input[type="checkbox"] + .checkboxLabel {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  input[type="checkbox"] + .checkboxLabel::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    margin-right: 23px;
+  }
+
+  input[type="checkbox"]:checked + .checkboxLabel::before {
+    background-color: #fff;
+  }
+}
+
+.btn_call {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  width: 380px;
+  height: 71px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0;
+
+  display: flex;
+
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+  cursor: pointer;
+
+  .btn_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #fff;
+
+    height: 100%;
+    width: 80%;
+  }
+
+  .btn_icon {
+    display: inline-block;
+    position: relative;
+    width: 71px;
+    height: 71px;
+
+    svg {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+    }
+  }
+}
+
+.btn_call:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.submit_message {
+  font-size: 55px;
+  font-weight: 600;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  p {
+    text-align: center;
+  }
+
+  .logo {
+    align-self: flex-end;
+  }
+}
+
+.exit_button {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .sidepanel_smooth {
+    display: none;
+  }
+
+  .sidepanel {
+    padding: 100px 34px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .exit_button {
+    display: block;
+  }
+
+  .panel_title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .form {
+    width: 100%;
+    height: 100%;
+
+    .formField {
+      width: 100%;
+      height: 20px;
+    }
+  }
+
+  .formCheckbox {
+    font-size: 12px;
+    font-weight: 400;
+
+    height: 42px;
+    width: 100%;
+
+    opacity: 0.8;
+
+    input[type="checkbox"] {
+      appearance: none;
+      background-color: transparent;
+    }
+
+    input[type="checkbox"] + .checkboxLabel {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    input[type="checkbox"] + .checkboxLabel::before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #fff;
+      margin-right: 23px;
+    }
+
+    input[type="checkbox"]:checked + .checkboxLabel::before {
+      background-color: #fff;
+    }
+  }
+
+  .btn_call {
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    height: 46px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+
+    display: flex;
+
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+
+    cursor: pointer;
+
+    .btn_text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #fff;
+
+      height: 100%;
+      width: 85%;
+    }
+
+    .btn_icon {
+      display: inline-block;
+      position: relative;
+      width: 20%;
+      height: 20%;
+
+      svg {
+        position: absolute;
+        left: 25px;
+        top: 15px;
+      }
+    }
+  }
+
+  .submit_message {
+    font-size: 30px;
+  }
+}

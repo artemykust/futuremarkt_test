@@ -1,0 +1,52 @@
+header {
+  max-width: 1320px;
+  height: 41px;
+
+  font-family: "Montserrat";
+  line-height: 41px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.logo {
+  height: 40px;
+  width: 170px;
+}
+
+.telephone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 1600px) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .menu {
+    display: block;
+  }
+  .telephone span {
+    display: none;
+  }
+}
